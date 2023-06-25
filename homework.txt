@@ -13,6 +13,3 @@ how to run this application
 1. java 8 / java 11
 2. generate key pair + key store, save / configure in config service
 3. start config service first
-
-
-test test test!!!!!
