@@ -40,7 +40,7 @@ public class SearchServiceImpl implements SearchService {
 
         CompletableFuture<Void> searchUniversity = CompletableFuture.supplyAsync(()-> {
             String url = "http://localhost:8200/university?name=" + name;
-            String university = restTemplate.getForObject(url, String.class);
+            University university = restTemplate.getForObject(url, University.class);
             if (university == null) throw new ResourceNotFoundException("university", "name", name);
             return university;
         }).thenAccept((result)->{
